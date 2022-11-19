@@ -28,10 +28,30 @@ a{
     text-decoration: none;
 }
 
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
 body{
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
     font-family: var(--main-ff);
+}
+
+/* wrapper */
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    flex: 1 1 0;
+    min-height: 100%;
+    height: auto !important;
 }
 
 /* container */
@@ -125,6 +145,7 @@ body{
 
 .main{
     margin-top: 93px;
+    flex: 1 1 0;
 }
 
 .main_inner{
@@ -152,6 +173,7 @@ body{
 
 .col_header-secondary{
     font-size: 18px;
+    font-weight: 400;
     line-height: 21.78px;
     color: var(--main-text-color)
 }
@@ -174,7 +196,7 @@ br{
 }
 
 .col_multiline_gradient{
-    background-image: linear-gradient(90deg ,#fcaf44, #fd1f1e);
+    background-image: linear-gradient(90deg ,#fcaf44 50%, #fd1f1e);
     -webkit-background-clip: text;
     -moz-background-clip: text;
 }
@@ -202,11 +224,9 @@ br{
     grid-template-columns: 1fr 1fr;
     grid-template-columns: max-content auto;
     column-gap: 30px;
-    row-gap: 31px;
+    row-gap: 30px;
 }
 
-.col_item{
-}
 
 .col_btn{
     width: 262px;
@@ -229,7 +249,7 @@ br{
 .item_header{
     text-transform: uppercase;
     font-size: 18px;
-    letter-spacing: .9px;
+    letter-spacing: .8px;
     line-height: 21.78px;
 }
 
@@ -237,6 +257,11 @@ br{
     font-size: 16px;
     font-family: var(--secondary-ff);
     margin-top: 6px;
-    line-height: 19.5px;
+    line-height: 20px;
 }
 
+/* footer */
+
+.footer{
+    margin-bottom: 20px;
+}
