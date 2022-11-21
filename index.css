@@ -52,33 +52,65 @@ body{
     flex-direction: column;
     justify-content: space-between;
     height: auto;
-    flex: 1 1 0;
-    min-height: 100%;
-    height: auto !important;
 }
 
 /* background */
 
 .red_light{
     position: absolute;
-    top: 251px;
-    left: -237px;
-    width: 311px;
-    height: 311px;
+    top: 151px;
+    left: -337px;
+    width: 511px;
+    height: 511px;
+    border-radius: 50%;
     background-color: #961A1A;
-    opacity: 0.3;
-    filter: blur(196px);
+    opacity: 0.15;
+    filter: blur(500px);
 }
 .purple_light{
     position: absolute;
-    width: 259px;
-    height: 259px;
-    left: 467px;
-    top: -154px;
+    width: 459px;
+    height: 459px;
+    left: 367px;
+    border-radius: 50%;
+    top: -254px;
     background: #833AB4;
-    opacity: 0.3;
+    opacity: 0.1;
+    filter: blur(500px);
+}
+
+.yellow_light{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -66px;
+    top: 562px;
+    display: none;
+    background: #FCB045;
+    opacity: 0.1;
     filter: blur(196px);
 }
+
+.glass{
+    position: absolute;
+    width: 320px;
+    height: 445px;
+    left: 0px;
+    top: 53px;
+    display: none;
+    background: radial-gradient(238.53% 189.02% at 3.2% 3.49%, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    backdrop-filter: blur(7.5px);
+}
+
+.noise{
+    position: absolute;
+    width: 320px;
+    height: 445px;
+    left: 0px;
+    top: 53px;
+    display: none;
+}
+
 .red_ball{
     position: absolute;
     width: 83px;
@@ -86,7 +118,7 @@ body{
     left: 384px;
     top: 83px;
     border-radius: 50%;
-    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%);
     box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
     backdrop-filter: blur(2px);
 }
@@ -97,7 +129,7 @@ body{
     left: 716px;
     top: 547px;
     border-radius: 50%;
-    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%);
     box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
     filter: blur(2.5px);
     backdrop-filter: blur(2px);
@@ -128,7 +160,7 @@ body{
 /* header */
 
 .header{
-    margin-top: 57px;
+    padding-top: 57px;
 }
 
 .header_inner{
@@ -166,13 +198,12 @@ body{
 /* nav */
 
 .nav{
-    width: 50%;
-    margin-left: 52px;
+    width: 55.4%;
+    padding-left: 52px;
 }
 
 .nav_list{
     list-style: none;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -329,8 +360,7 @@ br{
 /* footer */
 
 .footer{
-    margin-top: 123px;
-    margin-bottom: 20px;
+    padding-top: 123px;
     height: 215px;
 }
 
@@ -421,6 +451,7 @@ br{
     font-family: var(--secondary-ff);
     text-align: right;
     margin-top: 32px;
+    margin-bottom: 20px;
 }
 
 .footer_copyright div{
@@ -437,9 +468,52 @@ br{
 
 
 @media (max-width: 320px){
-    
-    .background-desktop{
-        display: none;
+
+    .red_light{
+        width: 211px;
+        height: 210px;
+        left: -55px;
+        top: 353px;
+        opacity: 0.3;
+        filter: blur(196px);
+    }
+
+    .purple_light{
+        width: 259px;
+        height: 259px;
+        left: 258px;
+        top: 159px;
+        opacity: 0.3;
+        filter: blur(196px);
+    }
+
+    .yellow_light{
+        display: block;
+    }
+
+    .red_ball_small{
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 29px;
+        top: 460px;
+    }
+
+    .purple_ball{
+        width: 40px;
+        height: 40px;
+        left: 296px;
+        top: 288px;
+        filter: blur(5px);
+        backdrop-filter: blur(2px);
+    }
+
+    .glass{
+        display: block;
+    }
+
+    .noise{
+        display: block;
     }
 
     .wrapper{
@@ -468,7 +542,7 @@ br{
     }
 
     .nav{
-        margin-left: 0;
+        padding-left: 0;
         justify-content: space-between;
         width: 100%;
     }
@@ -486,7 +560,7 @@ br{
 
     .main{
         padding-top: 41px;
-        padding-bottom: 52px;
+        padding-bottom: 57px;
         height: 445px;
         flex-grow: 0;
     }
@@ -556,10 +630,10 @@ br{
     }
 
     .footer{
-        margin-top: 0;
-        padding-top: 45px;
-        margin-bottom: 0;
+        padding-top: 40px;
+        padding-bottom: 550px;
         background-color: var(--main-bg-color);
+        z-index: 1;
     }
 
     .col-about,.col-menu,.col-contacts{
