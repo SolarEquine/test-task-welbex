@@ -528,9 +528,15 @@ br{
     .header{
         margin-top: 0;
         height: 55px;
+        position: fixed;
+        width: 100%;
         background-color: var(--main-bg-color);
         z-index: 1;
         padding: 17px 0;
+    }
+
+    .header_text{
+        width: 100%;
     }
     
     .header_logo{
@@ -559,8 +565,8 @@ br{
     }
 
     .main{
-        padding-top: 41px;
-        padding-bottom: 57px;
+        padding-top: 96px;
+        padding-bottom: 404px;
         height: 445px;
         flex-grow: 0;
     }
@@ -630,7 +636,7 @@ br{
     }
 
     .footer{
-        padding-top: 40px;
+        padding-top: 41px;
         padding-bottom: 550px;
         background-color: var(--main-bg-color);
         z-index: 1;
@@ -641,7 +647,7 @@ br{
     }
 
     .col-menu{
-        margin-top: 32px;
+        margin-top: 31px;
     }
 
     .col-contacts{
