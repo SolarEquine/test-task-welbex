@@ -52,6 +52,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     height: auto;
+    overflow-x: hidden;
 }
 
 /* background */
@@ -773,9 +774,7 @@ br{
 
 @media (max-width: 320px){
 
-    .header_logo{
-        display: none;
-    }
+
 
     .glass{
         display: block;
