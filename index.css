@@ -43,6 +43,7 @@ body{
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
     font-family: var(--main-ff);
+    overflow-x: hidden;
 }
 
 /* wrapper */
@@ -52,10 +53,15 @@ body{
     flex-direction: column;
     justify-content: space-between;
     height: auto;
-    overflow-x: hidden;
+    
 }
 
 /* background */
+
+.background{
+    width: 100%;
+
+}
 
 .red_light{
     position: absolute;
